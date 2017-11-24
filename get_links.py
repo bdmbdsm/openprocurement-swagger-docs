@@ -4,16 +4,18 @@ import os, sys
 
 DOCS_DIR = 'docs/'
 
-HOST = 'https://raw.githubusercontent.com'
-USER = 'bdmbdsm'
-REPO_NAME = 'openprocurement-swagger-docs'
-BRANCH = 'master'
+SWAGGER_UI_URL = 'https://generator.swagger.io/?url='
+HOST = 'https://raw.githubusercontent.com/'
+USER = 'bdmbdsm/'
+REPO_NAME = 'openprocurement-swagger-docs/'
+BRANCH = 'master/'
+
 PATH = 'docs/'
 
 
 def get_link_for_filename(filename):
     return ''.join((
-        HOST, USER, REPO_NAME, BRANCH, PATH, filename
+        SWAGGER_UI_URL, HOST, USER, REPO_NAME, BRANCH, PATH, filename
     ))
 
 
@@ -24,7 +26,7 @@ def generate_links():
     for filename in files:
         links +=\
             ''.join((
-                '[', filename, '](', get_link_for_filename(filename), ')\n'
+                '[', filename, '](', get_link_for_filename(filename), ')\n\n'
             ))
 
     return links
