@@ -6,6 +6,13 @@ You can update README.md with new links by deleting old links and
 echo "`python get_links.py`" >> README.md
 ```
 
+To clean documentation files from service routes (like `/health`, `/spore` and `/swagger`,
+simply run
+
+```
+python clean_files.py
+```
+
 [op_2.4_tenders_aboveThresholdEU.json](https://generator.swagger.io/?url=https://raw.githubusercontent.com/bdmbdsm/openprocurement-swagger-docs/master/docs/op_2.4_tenders_aboveThresholdEU.json)
 
 [op_2.4_tenders_aboveThresholdUA.defense.json](https://generator.swagger.io/?url=https://raw.githubusercontent.com/bdmbdsm/openprocurement-swagger-docs/master/docs/op_2.4_tenders_aboveThresholdUA.defense.json)
